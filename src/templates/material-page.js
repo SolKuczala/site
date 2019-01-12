@@ -1,34 +1,40 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import simpleStyles from '../commons/simple.module.sass';
 import Content, { HTMLContent } from '../components/Content';
+import simpleStyles from '../commons/simple.module.sass';
 
-export const AboutTemplate = ({ title, content, contentComponent }) => {
+export const MaterialTemplate = ({ title, description, date, content, contentComponent }) => {
     const PageContent = contentComponent || Content;
     return (
         <section className={simpleStyles.content}>
             <h1>{title}</h1>
+            <p>{description}</p>
+            <p>{date}</p>
             <PageContent content={content} />
         </section>
     );
 };
 
 export default ({ data: { markdownRemark: post } }) => (
-    <AboutTemplate
+    <MaterialTemplate
         title={post.frontmatter.title}
+        description={post.description}
+        date={post.date}
         content={post.html}
         contentComponent={HTMLContent}
     />
 );
 
 export const aboutQuery = graphql `
-    query AboutPage($id: String!) {
+    query MaterialPage($id: String!) {
         markdownRemark(id: { eq: $id }) {
             id
             html
             frontmatter {
                 title
+                description
+                date
             }
         }
     }
