@@ -10,6 +10,8 @@ display_url: https://comunidadit.netlify.com
 collections:
   - name: "pages"
     label: "Pages"
+    delete: false
+    create: false
     files:
       - file: "src/pages/about/index.md"
         label: "About"
@@ -18,3 +20,15 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about"}
           - {label: "Título", name: "title", widget: "string"}
           - {label: "Cuerpo", name: "body", widget: "markdown"}
+
+  - name: "material"
+    label: "Material"
+    folder: "src/pages/material"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "material"}
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Descripción", name: "description", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "date"}
+      - {label: "Body", name: "body", widget: "markdown"}
