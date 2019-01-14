@@ -31,6 +31,7 @@ collections:
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Descripción", name: "description", widget: "string"}
       - {label: "Fecha", name: "date", widget: "date"}
+      - {label: "Tipo", name: "type", widget: "select", options: ["js", "html", "css", "all"]}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "person"

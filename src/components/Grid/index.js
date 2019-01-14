@@ -2,8 +2,8 @@ import React from 'react';
 
 import gridStyles from './grid.module.sass';
 
-export const Box = ({ children }) => (
-    <div className={gridStyles.box}>
+export const Box = ({ children, ...props }) => (
+    <div className={gridStyles.box} {...props}>
         {children}
     </div>
 );

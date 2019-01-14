@@ -1,8 +1,9 @@
 ---
 templateKey: material
 title: '[JS #1] Variables'
-date: 2016-12-17T15:04:10.000Z
-description: Introducción a variables.
+date: 2018-09-01T15:04:10.000Z
+description: Introducción a las variables.
+type: js
 ---
 Las variables son lugares donde puedo guardar valores.
 
@@ -12,7 +13,6 @@ const numero = 2;
 
 // sigue código...
 // luego puedo referenciarla y obtener el valor que guardé.
-// sigue código...
 
 console.log(numero); //> imprime por pantalla 2
 ```
