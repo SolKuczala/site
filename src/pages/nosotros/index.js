@@ -1,44 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby';
 
-import TwitterIcon from '../../icons/twitter-brands.svg';
-import LinkedinIcon from '../../icons/linkedin-in-brands.svg';
-import MailIcon from '../../icons/envelope-solid.svg';
-
-import Grid, { Box } from '../../components/Grid';
-import ExtLink from '../../components/ExtLink';
-import Img from '../../components/Img';
+import Grid from '../../components/Grid';
 import simpleStyles from '../../commons/simple.module.sass';
-import personStyles from './person.module.sass';
+import SocialBox from '../../components/SocialBox';
 
 const mapToBox = (edges) => edges.map(
-    ({ node: { id, frontmatter: { name, imgSrc, rol, twitter, linkedin, mail } } }) => (
-        <Box key={id}>
-            <div className={personStyles.imgContainer}>
-                <Img src={imgSrc} />
-            </div>
-            <div className={personStyles.content}>
-                <h3>{name}</h3>
-                <h4>{rol}</h4>
-                <div className={personStyles.socialContainer}>
-                    {twitter && (
-                        <ExtLink href={twitter} alt="twitter">
-                            <TwitterIcon />
-                        </ExtLink>
-                    )}
-                    {linkedin && (
-                        <ExtLink href={linkedin} alt="linkedin">
-                            <LinkedinIcon />
-                        </ExtLink>
-                    )}
-                    {mail && (
-                        <ExtLink href={`mailto:${mail}`} alt="mail">
-                            <MailIcon />
-                        </ExtLink>
-                    )}
-                </div>
-            </div>
-        </Box>
+    ({ node: { id, frontmatter } }) => (
+        <SocialBox key={id} {...frontmatter} />
     )
 );
 

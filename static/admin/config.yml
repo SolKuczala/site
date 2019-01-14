@@ -32,3 +32,27 @@ collections:
       - {label: "Descripción", name: "description", widget: "string"}
       - {label: "Fecha", name: "date", widget: "date"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "person"
+    label: "Personas"
+    folder: "src/data/persons"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "person"}
+      - {label: "Nombre", name: "name", widget: "string"}
+      - {label: "Rol", name: "rol", widget: "string"}
+      - {label: "Twitter", name: "twitter", widget: "string"}
+      - {label: "Linkedin", name: "linkedin", widget: "string"}
+      - {label: "Mail", name: "mail", widget: "string"}
+      - {
+        label: "Imagen de perfil",
+        name: "imgSrc",
+        widget: "image",
+        media_library:
+          {
+            config:
+              {
+                multiple: false
+              }
+          }
+      }
