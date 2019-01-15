@@ -35,6 +35,7 @@ header
 main
     padding: .5em
     padding-top: 5em
+    margin: 0 200px
     flex-grow: 1
 
 footer
@@ -46,6 +47,14 @@ footer
     svg
         width: 13px
         color: red
+
+@media(max-width: 1024px)
+    main
+        margin: 0 100px
+
+@media(max-width: 768px)
+    main
+        margin: 0
 
 @media(max-width: 640px)
     header

@@ -17,7 +17,6 @@ export default ({ show, onHideSideMenu }) => (
                 <nav>
                     <Link to="/" onClick={onHideSideMenu}>inicio</Link>
                     <Link to="/material" onClick={onHideSideMenu}>material</Link>
-                    <Link to="/about" onClick={onHideSideMenu}>about</Link>
                     <Link to="/nosotros" onClick={onHideSideMenu}>nosotros</Link>
                     <Link to="/contacto" onClick={onHideSideMenu}>contacto</Link>
                 </nav>
