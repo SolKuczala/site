@@ -1,6 +1,6 @@
 ---
 templateKey: material
-title: '[JS #3] Operadores'
+title: '[JS #3] Resumen Operadores'
 date: 2018-09-03T15:00:00.000Z
 description: Muestra de algunos operadores básicos.
 type: js
