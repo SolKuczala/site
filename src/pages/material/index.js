@@ -9,7 +9,7 @@ const colors = {
     js: { primary: 'yellow', secondary: '#eeee00' },
     html: { primary: '#f09c9c', secondary: '#eb8787' },
     css: { primary: '#c49fe6', secondary: '#be8ceb' },
-    general: { primary: '#eee', secondary: '#ddd' }
+    all: { primary: '#eee', secondary: '#ddd' }
 };
 
 const mapToBox = (edges) => edges.map(({
